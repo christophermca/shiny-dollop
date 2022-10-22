@@ -1,0 +1,18 @@
+[submodule "golang/go-algo"]
+	path = golang/go-algo
+	url = git@github.com:christophermca/go-algo.git
+[submodule "java/pratica"]
+	path = java/pratica
+	url = git@github.com:christophermca/practica.git
+[submodule "python/pygame"]
+	path = python/pygame
+	url = git@github.com:pygame/pygame.git
+[submodule "javascript/react/compare-render"]
+	path = javascript/react/compare-render
+	url = git@github.com:christophermca/compare-render.git
+[submodule "typescript/toTheMoon"]
+	path = typescript/toTheMoon
+	url = git@github.com:christophermca/fluffy-octo-enigma.git
+[submodule "webgl/fluffy-octo-enigma"]
+	path = webgl/fluffy-octo-enigma
+	url = git@github.com:christophermca/fluffy-octo-enigma.git
