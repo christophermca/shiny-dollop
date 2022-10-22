@@ -12,7 +12,7 @@
 	url = git@github.com:christophermca/compare-render.git
 [submodule "typescript/toTheMoon"]
 	path = typescript/toTheMoon
-	url = git@github.com:christophermca/fluffy-octo-enigma.git
+	url = git@github.com:christophermca/symmetrical-parakeet.git
 [submodule "webgl/fluffy-octo-enigma"]
 	path = webgl/fluffy-octo-enigma
 	url = git@github.com:christophermca/fluffy-octo-enigma.git
