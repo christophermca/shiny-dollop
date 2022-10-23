@@ -4,24 +4,38 @@ learn() {
   local GREEN="\e[32m";
   local RED="\e[31m";
   local NORMAL="\e[0m";
+  local FILE_PATH="${BASH_SOURCE:-0}"
+  local PARENT_PATH="$(dirname $(dirname $FILE_PATH))"
 
+
+  print_list() {
+    echo -e "${GREEN}Available Options:\n"
+    ls $1 -1
+  }
 
   report_error() {
-    echo -e "\"${RED}$1${NORMAL}\" is not an option\n\n${GREEN}Available Options:"
-    ls -1 ~/Repos/_learning/
+    echo -e "\"${RED}$1${NORMAL}\" is not an option"
+    print_list $PARENT_PATH
   };
 
   found_subject() {
-    echo -e "Lets Learn ${GREEN}$1${NORMAL}!\n"
-    cd ~/Repos/_learning/$1
-    echo "Projects:"
-    ls .
+    local language=$1
+    local language_path=$PARENT_PATH/$language
+    echo -e "Lets Learn ${GREEN}$language${NORMAL}!\n"
+
+    [[ -d $language_path ]] && cd $language_path && print_list $language_path
   };
 
+
+  ###
+  # `$#` ....  returns number of parameters
+  # `#@` ....  returns parameters
+  ###
   if (( $# == 1 )); then
-2   found_subject $1 || report_error $1
+    # Bash does not have a try/catch statement closest thing is to use `||`
+    # do this command, if it fails, then do that
+    found_subject $1 || report_error $1
   else
-    cd ~/Repos/_learning/ && ls
-    ## include prompt to get subject. Recursivly run through
+    print_list $PARENT_PATH
   fi
 }
