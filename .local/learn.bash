@@ -9,8 +9,9 @@ learn() {
 
 
   print_list() {
-    echo -e "${GREEN}Available Options:\n"
-    ls $1 -1
+    echo -e "${GREEN}Available Options:\n---\n"
+
+    echo -e "$(ls $1 -1) \n"
   }
 
   report_error() {
