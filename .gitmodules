@@ -16,3 +16,6 @@
 [submodule "webgl/fluffy-octo-enigma"]
 	path = webgl/fluffy-octo-enigma
 	url = git@github.com:christophermca/fluffy-octo-enigma.git
+[submodule "javascript/JS-algo-practica"]
+	path = javascript/JS-algo-practica
+	url = git@github.com:christophermca/JS-algo-practica.git
